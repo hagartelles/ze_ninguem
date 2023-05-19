@@ -15,6 +15,7 @@
     <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/slider.css">
 
     <title>Zé Ninguém </title>
 </head>
@@ -65,35 +66,73 @@
     </header>
 
 <!-- -------------------------- START CONTENT -------------------------- -->
-    <main class="layer-container">
+    <main class="layer-container ">
 <!-- -------------------------- CONTAINER - first section-------------------------- -->
-        <section id="first-content" class="container">
+        <section class="container">
             <div class="section-title">
                 <h1 id="site-title">
                     Fala Zé Ninguém!
                 </h1>
                 <div class="bar-divider"></div>
             </div>
-            <div class="highlights">
-                <!-- BANNER SIDE -->
-                <div class="highlight-content">
-                    <figure>
-                        <img src="./assets/img/hero-banner.png" class="img-banner" alt="Banner one">
-                    </figure>
-                </div>
-                <!-- clear space -->
-                <div class="clear-space"></div>
-                <!-- A SIDE -->
-                <div class="aside-content">
-                    <figure class="aside-banner">
-                        <img src="./assets/img/podcast-2.png" alt="" class="img-aside">
-                    </figure>
-                    <figure class="aside-banner">
-                        <img src="./assets/img/podcast-4.png" alt="" class="img-aside">
-                    </figure>
 
-                </div>
+            <div class="first-content flex-content">
+                    <div class="slider">
+                        <div class="slider-content">
+        
+                            <input type="radio" name="btn-radio" id="radio1">
+
+                            <input type="radio" name="btn-radio" id="radio2">
+
+                            <input type="radio" name="btn-radio" id="radio3">
+                            
+                            
+                            <div class="slide-box first ">
+                                <!-- Para adicionar um LINK é necessário a tag IMG dentro da tag A.
+                                para a responsividade é necessário os outro tamanho dos items IMG -->
+                                <img src="./assets/img/podcast-2.png" class="resized" alt="slide 1">
+                            </div>
+            
+                            <div class="slide-box ">
+                                <img src="./assets/img/podcast-4.png" class="resized" alt="slide 2">
+                            </div>
+            
+                            <div class="slide-box ">
+                                <img src="./assets/img/podcast-5.png" class="resized" alt="slide 3">
+                            </div>
+            
+                            <div class="nav-auto">
+                                <div class="auto-btn1"></div>
+                                <div class="auto-btn2"></div>
+                                <div class="auto-btn3"></div>
+                            </div>
+            
+                            <div class="nav-manual">
+                                <label for="radio1" class="manual-btn"></label>
+                                <label for="radio2" class="manual-btn"></label>
+                                <label for="radio3" class="manual-btn"></label>
+                            </div>
+                        </div>
+                    </div>
+                <!-- END SLIDER -->
+                <!-- SIDE CONTENT -->
+                    <!-- clear space -->
+                    <!-- <div class="clear-space"></div> -->
+                    <!-- A SIDE -->
+                    
+                    
+                    
+                    <!-- <div class="aside-content">
+                        <div class="aside-banner">
+                            <img src="./assets/img/podcast-2.png" class="resized" alt="" class="img-aside">
+                        </div>
+                        <div class="aside-banner">
+                            <img src="./assets/img/podcast-4.png" class="resized" alt="" class="img-aside">
+                        </div>
+                    </div> -->   
             </div>
+
+            
         </section>
 <!-- -------------------------- CONTAINER - news section START -------------------------- -->
         <section id="news" class="container">
@@ -291,5 +330,7 @@
             </div>
         </div>
     </footer>
+
+    <script src="./js/slider.js"></script>
 </body>
 </html>
