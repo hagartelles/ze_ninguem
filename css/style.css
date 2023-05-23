@@ -4,10 +4,12 @@
 
     /* Collors */
     --main-red: #be3144;
+    --main-red-background: hsla(352, 59%, 47%, 0.603);
+    --russian-violet: hsl(252, 80%, 16%);
     --flourescent-blue: #00f9ef;
     --heliotrope-gray: #aba6bd;
     --dark-violet: hsl(252, 100%, 12%);
-    --space-cadet: hsl(247, 43%, 20%);
+    --space-cadet: hsl(276, 100%, 12%);
     --blue-ryb: #0052ff;
     --white: #ffffff;
 
@@ -32,6 +34,9 @@
 
     /* ## Spacing */
     --section-padding: 3rem;
+
+    /*Height - fixed menu*/
+    --heightCalc:calc(100vh - 10rem)
 
 }
 
@@ -104,44 +109,6 @@ a{
     color:inherit;
 }
 
-.bar-divider{
-    background-color: white;
-    margin: -2rem auto 2rem;
-    width: 50%;
-    height:.1rem;
-    border-radius: 2rem ;
-}
-
-.flex-content{
-    display:flex;
-}
-
-/* .hidden {
-    display: none;
-}
- */
-
-    /*-------------------------- HEADER --------------------------*/
-
-.logo-img {
-    width: 10rem;
-    height:8rem;
-}
-
-.container-top-site{
-    display:flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 1rem 2.8rem;
-}
-
-.icons-top {
-    width: 15rem;
-    display:flex;
-    justify-content: space-evenly;
-    text-shadow: .3rem .3rem .3rem rgba(255, 217, 0, 0.507)
-}
-
 h1,h2 {
     text-shadow:0 3px 5px hsla(0, 0%, 0%, 0.8);
     text-align: center;
@@ -184,25 +151,80 @@ h1{
 }
 
                     /* END CONTAINER */
- /*-------------------------- navbar & searchbar --------------------------*/
 
- #nav-bar{
+.bar-divider{
+    background-color: white;
+    margin: -2rem auto 2rem;
+    width: 50%;
+    height:.1rem;
+    border-radius: 2rem ;
+}
+
+.flex-content{
+    display:flex;
+}
+
+/* .hidden {
+    display: none;
+}
+ */
+ /*-------------------------- END GLOBAL STYLE --------------------------*/
+    /*-------------------------- HEADER --------------------------*/
+.container-top-site{
+    width:100%;
+}
+
+.fix-header{
+    width:100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2.8rem;
+    background:var(--russian-violet);
+    box-shadow: 0 0 1.5rem hsla(0, 0%, 0%, 1);}
+
+.logo-img {
+    margin-left:3rem;
+    width: 10rem;
+    height:8rem;
+}
+
+.icons-top {
+    width: 15rem;
+    display:flex;
+    justify-content: space-evenly;
+    text-shadow: .3rem .3rem .3rem rgba(0, 0, 0, 0.507);
+    cursor:pointer;
+    
+}
+
+.icons-top i:hover{
+    transform: scale(1.5) translate3d(0rem, 0rem, .3rem);
+    transition:ease-in-out .5s;
+    color: var(--main-red);
+}
+
+
+
+
+ /*-------------------------- navbar --------------------------*/
+
+ .nav-container{
     margin: 1rem 0;
-    padding:0 4rem;
+    padding:0 1rem;
     width: 100%;
     height: 5rem;
     display:flex;
-    justify-content: space-between;
-    background:var(--main-red);
+    justify-content: center;
     align-items: center;
-    font-size: var(--fs-2);
-    box-shadow: 0 0 1rem hsla(0, 0%, 0%, 1);
+    font-size: var(--fs-2);  
 
  }
 
  .nav-menu {
-    width: 50%;
+    width: 90%;
     display:flex;
+    padding:0 auto;
     justify-content: space-between;
 }
 
@@ -212,7 +234,7 @@ h1{
 }
 
 .nav-item a:hover{
-    color:var(--dark-violet);
+    color:var(--main-red);
     transition: var( --transition);
 }
 
@@ -220,7 +242,7 @@ h1{
     content: "";
     width:0;
     height:.3rem;
-    background-color: var(--dark-violet);
+    background-color: var(--main-red);
     position:absolute;
     bottom: 0;
     left:0;
@@ -230,14 +252,159 @@ h1{
 
 .nav-item a:hover::after{
     width:100%;
-
 }
 
-.searchbar {
+.btn-form{
+    border:none;
+    background-color: transparent;
+}
+
+ /*-------------------------- TOGGLE BUTTON --------------------------*/
+
+#btn-menu{
+    margin-right:3rem;
+    width: 5rem;
+    height:5rem;
+    border: .2rem solid var(--white);
+    background:transparent;
+    border-radius: .2rem;
+    cursor:pointer;
+    transition-duration: 1s; 
+    display:none;   
+}
+
+.row{
+    width: 3.5rem;
+    height:.3rem;
+    background-color: var(--white);
+    margin: .8rem auto;
+    position:relative;
+    transform-origin: center;
+    transition:var(--transition);
+}
+
+#btn-menu.activeBtn {
+    border: .2rem solid var(--main-red);
+}
+
+#btn-menu.activeBtn .row:nth-child(1){
+    transform: translateY(1.2rem) rotate(-45deg);
+    background-color: var(--main-red);
+}
+
+#btn-menu.activeBtn .row:nth-child(3){
+    transform: translateY(-1rem) rotate(45deg);
+    background-color: var(--main-red);
+}
+
+#btn-menu.activeBtn .row:nth-child(2){
+    width: 0;
+}
+
+
+                /*Menu mobile*/
+
+
+.nav-container-mobile{
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    width:100%;
+    height:0;
+    position:absolute;
+    z-index:10;
+    font-size: var(--fs-1); 
+    visibility: hidden;
+    transition: var(--transition);
+    overflow: hidden;
+    
+    
+}
+
+ .nav-menu-mobile {
+    width: 100%;
     display:flex;
+    flex-direction: column;
+    padding:0 auto;
+    align-items: center;
+    
 }
+
+.nav-item-mobile{
+    width:100%;
+    padding:1rem;
+    display:flex;
+    align-items: center;
+    transition: var( --transition);
+    border-radius: 1rem;
+}
+
+.nav-item-mobile:hover{
+    background-color: hsla(252, 80%, 16%, 0.9);
+
+}
+
+
+.nav-item-mobile a{
+    width:100%;
+    display:inline-block;
+    position:relative;
+    transition: var( --transition);
+    text-align:center;
+}
+
+.nav-item-mobile a:hover{
+    color:var(--main-red);
+}
+
+.nav-item-mobile a::after{
+    content: "";
+    width:0;
+    height:.3rem;
+    background-color: var(--main-red);
+    position:absolute;
+    bottom: 0;
+    left:0;
+    transition: var( --transition);
+
+}
+
+.nav-item-mobile a:hover::after{
+    width:100%;
+} 
+
+@media (max-width: 991px){
+    .nav-container{
+        display:none;
+    }
+    .icons-top{
+        display:none;
+    }
+
+    #btn-menu{
+        display:block;
+    }
+
+    .nav-container-mobile.mobileMenu {
+        visibility: visible;
+        height:var(--heightCalc);
+    }
+
+}
+
+
+
+/* .searchbar {
+    display:flex;
+} */
 
 /******************** END NAV-BAR ***************/
+
+
+
+
+
+
+
                     /* hero content */
 
  
@@ -281,17 +448,21 @@ h1{
 
 .container-full {
     width:100vw;
-    height:100vh;
+    height:var(--heightCalc);
+    /* position:absolute;
+    z-index: 100;
+    top:10rem;
+    left:0; */
     display:flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, .7);
     
 }
 
 
-form{
-    background-color: hsla(252, 100%, 32%, 0.13);
+form {
+    background-color: hsla(252, 100%, 32%, 1);
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(255, 255, 255, 0.1) 0px -3px 5px;
     height: 60rem;
     max-width: 50rem;

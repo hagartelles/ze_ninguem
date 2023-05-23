@@ -26,43 +26,74 @@
         <div class="container-top-site">
            
 <!-- -------------------------- logo & social media links -------------------------- -->
-            <div class="logo icon">
-                <img src="./assets/img/LOGO-ZE-final.png" alt="Logo Zé Ninguem" class="logo-img">
-             </div>
-     
-             <div class="icons-top link">
-                 <i class="fa-brands fa-instagram"></i>
-                 <i class="fa-brands fa-youtube"></i>
-                 <i class="fa-brands fa-square-facebook"></i>
-                 <i class="fa-brands fa-square-twitter"></i>
-             </div>
+            <div class="fix-header">
+                <div class="logo icon">
+                    <img src="./assets/img/LOGO-ZE-final.png" alt="Logo Zé Ninguem" class="logo-img">
+                 </div>
+                 <nav id="nav-bar" class="nav-container">           
+                    <ul class="nav-menu">
+                        <li class="nav-item">
+                            <a href="#">Quem Somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">O que fazemos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">M&iacute;dia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#">Agenda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="btn-form" id="btn-form">Fale Conosco</a>
+                        </li>
+                    </ul>
+                </nav>
+    
+                <button onclick="animateMenu()" id="btn-menu">
+                    <span class="row"></span>
+                    <span class="row"></span>
+                    <span class="row"></span>
+                </button>
+
+                <div class="icons-top link">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-square-facebook"></i>
+                    <i class="fa-brands fa-square-twitter"></i>
+                </div>
+           </div>
+
+            </div>
+                <!-- menu mobile -->
+            <nav id="nav-bar-mobile" class="nav-container-mobile">
+                <ul class="nav-menu-mobile">
+                    <li class="nav-item-mobile">
+                        <a href="#">Quem Somos</a>
+                        </li>                        <li class="nav-item-mobile">
+                        <a href="#">O que fazemos</a>
+                    </li>
+                    <li class="nav-item-mobile">
+                        <a href="#">M&iacute;dia</a>
+                    </li>
+                    <li class="nav-item-mobile">
+                        <a href="#">Agenda</a>
+                    </li>
+                    <li class="nav-item-mobile">
+                        <a href="#">Fale Conosco</a>
+                    </li>
+                </ul>
+            </nav>
+
+            
+            
+                <!-- end menu mobile -->
+    <!-- -------------------------- end navbar & searchbar -------------------------- -->
+             
         </div>
 <!-- -------------------------- navbar & searchbar -------------------------- -->
 
-        <nav id="nav-bar" class="nav-container">
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#">Quem Somos</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#">O que fazemos</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#">M&iacute;dia</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#">Agenda</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#">Fale Conosco</a>
-                </li>
-            </ul>
-            <div class="searchbar">
-                <input type="text" id="toSearch" placeholder="Buscar">
-                <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
-            </div>
-        </nav>
-<!-- -------------------------- end navbar & searchbar -------------------------- -->
+        
     </header>
 
 <!-- -------------------------- START CONTENT -------------------------- -->
@@ -76,7 +107,7 @@
                 <div class="bar-divider"></div>
             </div>
 
-            <div class="first-content flex-content">
+            <div class="first-content ">
                     <div class="slider">
                         <div class="slider-content">
         
@@ -90,15 +121,15 @@
                             <div class="slide-box first ">
                                 <!-- Para adicionar um LINK é necessário a tag IMG dentro da tag A.
                                 para a responsividade é necessário os outro tamanho dos items IMG -->
-                                <img src="./assets/img/podcast-2.png" class="resized" alt="slide 1">
+                                <img src="./assets/img/podcast-2.png" class="" alt="slide 1">
                             </div>
             
                             <div class="slide-box ">
-                                <img src="./assets/img/podcast-4.png" class="resized" alt="slide 2">
+                                <img src="./assets/img/podcast-4.png" class="" alt="slide 2">
                             </div>
             
                             <div class="slide-box ">
-                                <img src="./assets/img/podcast-5.png" class="resized" alt="slide 3">
+                                <img src="./assets/img/podcast-5.png" class="" alt="slide 3">
                             </div>
             
                             <div class="nav-auto">
@@ -250,7 +281,7 @@
 <!-- -------------------------- CONTAINER - news section END -------------------------- -->
         </section>
 
-        <section class="form-section">
+        <section class="form-section modal">
             <div class="container-full hidden">
                 <form action="" method="post">
                     <h1>Entre em contato</h1>
@@ -331,6 +362,6 @@
         </div>
     </footer>
 
-    <script src="./js/slider.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
