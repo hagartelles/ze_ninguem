@@ -45,7 +45,7 @@
                             <a href="#">Agenda</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="btn-form" id="btn-form">Fale Conosco</a>
+                            <a href="#" class="btn-form" onclick="openForm()">Fale Conosco</a>
                         </li>
                     </ul>
                 </nav>
@@ -80,18 +80,14 @@
                         <a href="#">Agenda</a>
                     </li>
                     <li class="nav-item-mobile">
-                        <a href="#">Fale Conosco</a>
+                        <a href="#" class="btn-modal" onclick="openForm()">Fale Conosco</a>
                     </li>
                 </ul>
             </nav>
-
-            
-            
                 <!-- end menu mobile -->
     <!-- -------------------------- end navbar & searchbar -------------------------- -->
-             
         </div>
-<!-- -------------------------- navbar & searchbar -------------------------- -->
+
 
         
     </header>
@@ -99,7 +95,7 @@
 <!-- -------------------------- START CONTENT -------------------------- -->
     <main class="layer-container ">
 <!-- -------------------------- CONTAINER - first section-------------------------- -->
-        <section class="container">
+        <section class="container first-section">
             <div class="section-title">
                 <h1 id="site-title">
                     Fala Zé Ninguém!
@@ -220,108 +216,16 @@
                             </p>
                         </div>
                     </div>
-                    <div class="grid-element">
-                        <figure class="grid-figure">
-                            <img src="./assets/img/podcast-4.png" alt="">
-                        </figure>
-                        <div class="news-text-div">
-                            <h3 class="news-title">Lorem Ipsum</h3>
-                            <p class="news-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="grid-element">
-                        <figure class="grid-figure">
-                            <img src="./assets/img/podcast-5.png" alt="">
-                        </figure>
-                        <div class="news-text-div">
-                            <h3 class="news-title">Lorem Ipsum</h3>
-                            <p class="news-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                        </div>
-                    </div> 
-                    <div class="grid-element">
-                        <figure class="grid-figure">
-                            <img src="./assets/img/podcast-2.png" alt="">
-                        </figure>
-                        <div class="news-text-div">
-                            <h3 class="news-title">Lorem Ipsum</h3>
-                            <p class="news-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="grid-element">
-                        <figure class="grid-figure">
-                            <img src="./assets/img/podcast-4.png" alt="">
-                        </figure>
-                        <div class="news-text-div">
-                            <h3 class="news-title">Lorem Ipsum</h3>
-                            <p class="news-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="grid-element">
-                        <figure class="grid-figure">
-                            <img src="./assets/img/podcast-5.png" alt="">
-                        </figure>
-                        <div class="news-text-div">
-                            <h3 class="news-title">Lorem Ipsum</h3>
-                            <p class="news-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                        </div>
-                    </div> 
+                    
                     <!-- GRID ELEMENTS END -->
                 </div>
                 <!-- GRID DIV END -->
 <!-- -------------------------- CONTAINER - news section END -------------------------- -->
         </section>
-
-        <section class="form-section modal">
-            <div class="container-full hidden">
-                <form action="" method="post">
-                    <h1>Entre em contato</h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit</p>
     
-                    <div class="input-single">
-                        <input type="text" name="name-box" id="name-box" class="input-area" required autocomplete="off">
-                        <label for="name-box">Nome</label>
-                    </div>
-    
-                    <div class="input-single">
-                        <input type="number" name="name-tel" id="name-tel" class="input-area" required autocomplete="off">
-                        <label for="name-tel">Telefone</label>
-                    </div>
-    
-                    <div class="input-single">
-                        <input type="email" name="email-box" id="email-box" class="input-area" required autocomplete="off">
-                        <label for="email-box">E-mail</label>
-                    </div>
-    
-                    <div class="input-single">
-                        <input type="text" name="subject-box" id="subject-box" class="input-area" required autocomplete="off">
-                        <label for="subject-box">Assunto</label>
-                    </div>
-    
-                    <div class="input-message">
-                        <textarea wrap="hard" name="menssage-box" id="menssage-box" cols="30" rows="8" placeholder=" Digite sua mensagem..."></textarea>
-                        <label for="menssage-box">Mensagem:</label>
-                    </div>
-    
-                    <div class="btn">
-                        <input type="submit" value="Enviar">
-                    </div>
-    
-                </form>
-            </div>
-    
-        </section>
 
     </main>
+
 
     <footer clas="footer-div">
         <div class="container grid-template">
@@ -336,9 +240,9 @@
             <div class="contacts">
                 <h2 class="contact">Contato</h2>
                 
-                <p>E-mail:<a href="mailto:">lorem@ipsum.com</a></p>
-                <p>Telefone:<a href="tel:+">+55(41)99999-9999</a></p>
-                <p>Celular<a href="tel:+">+55(41)99999-9999</a></p>
+                <p>E-mail:<a href="mailto:"> lorem@ipsum.com</a></p>
+                <p>Telefone:<a href="tel:+"> +55(41)99999-9999</a></p>
+                <p>Celular<a href="tel:+"> +55(41)99999-9999</a></p>
                 <p class="">
                 Curitiba - PR
                 </p>
@@ -361,6 +265,56 @@
             </div>
         </div>
     </footer>
+
+    <!-- -------------------------- Form -------------------------- -->
+    <div class="window-modal" id="window-modal-form" >
+    
+        <div class="modal modal-form">
+            <button class="close-btn" id="close-btn">X</button>
+            
+            <form action="" method="post">
+            
+                <h1>Entre em contato</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit</p>
+
+                <div class="input-single">
+                    <input type="text" name="name-box" id="name-box" class="input-area" required autocomplete="off">
+                    <label for="name-box">Nome:</label>
+                </div>
+
+                <div class="input-single">
+                    <input type="tel" name="name-tel" id="name-tel" class="input-area" required autocomplete="off">
+                    <label for="name-tel">Telefone:</label>
+                </div>
+
+                <div class="input-single">
+                    <input type="email" name="email-box" id="email-box" class="input-area" required autocomplete="off">
+                    <label for="email-box">E-mail:</label>
+                </div>
+
+                <div class="input-single">
+                    <input type="text" name="subject-box" id="subject-box" class="input-area" required autocomplete="off">
+                    <label for="subject-box">Assunto:</label>
+                </div>
+
+                <div class="input-message">
+                    <textarea wrap="hard" name="menssage-box" id="menssage-box" cols="30" rows="8" placeholder="Digite sua mensagem..."></textarea>
+                    <label for="menssage-box">Mensagem</label>
+                </div>
+
+                <div class="btn">
+                    <input type="submit" value="Enviar">
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <div class="whatsApp">
+        <a href="https://wa.me//5521999060262?text=Oi%20Zé%20ninguém%20vamos%20conversar!!%20">
+            <i class="fa-brands fa-whatsapp fa-lg"></i>
+        </a>
+    </div>
 
     <script src="./js/index.js"></script>
 </body>
