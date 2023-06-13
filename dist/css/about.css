@@ -1,0 +1,35 @@
+main.container{
+    margin-top: 20rem;
+}
+
+
+.img-about{
+    width:100%;
+    display:flex;
+    justify-content: center;
+    margin-bottom: 8rem;
+}
+
+.img-about img{
+    width: 40rem ;
+}
+
+.vision p, .mission p, .values p{
+    font-size: var(--fs-4);
+}
+
+.about-end{
+    font-size: var(--fs-4);
+    padding: 0 2rem;
+}
+.about-end p{
+    margin-bottom: 2rem;
+}
+
+.about-end p i{
+    cursor: pointer;
+}
+
+.vision h2, .mission h2, .values h2{
+    color:var(--main-red);
+}

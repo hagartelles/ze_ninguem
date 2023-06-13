@@ -3,6 +3,8 @@
 const menuMobile = document.getElementById('nav-bar-mobile');
 const btnMenu = document.getElementById('btn-menu');
 const modalForm = document.getElementById('window-modal-form');
+const modalShedule = document.getElementById('schedule-window-modal');
+
 
 menuMobile.addEventListener(' click', animateMenu);
 
@@ -13,7 +15,7 @@ function animateMenu(){
     
 }
 
-// modal 
+// modal form
 
 function openForm(){
     modalForm.classList.add('opened')
@@ -24,15 +26,25 @@ function openForm(){
         }
     })
 
-    modalForm.addEventListener("scroll",(e) =>{
-        modalForm.classList.remove('opened') 
+}
+
+//modal schedule
+
+function openSchedule(){
+    
+    modalShedule.classList.add('opened')
+
+    modalShedule.addEventListener("click",(e) => {
+        if (e.target.classList == 'close-btn' || e.target.id == 'schedule-window-modal'){
+            modalShedule.classList.remove('opened')
+        }  
     })
 
-    modalForm.addEventListener("scrollend",(e) =>{
-        modalForm.classList.remove('opened') 
-        console.log(1)
-    })
+
+
+
 }
+
 
 
 

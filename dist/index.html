@@ -15,7 +15,9 @@
     <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
     <!-- CSS -->
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/navbar.css">
     <link rel="stylesheet" href="./css/slider.css">
+    
 
     <title>Zé Ninguém </title>
 </head>
@@ -28,21 +30,21 @@
 <!-- -------------------------- logo & social media links -------------------------- -->
             <div class="fix-header">
                 <div class="logo icon">
-                    <img src="./assets/img/LOGO-ZE-final.png" alt="Logo Zé Ninguem" class="logo-img">
+                    <a href="./index.html"><img src="./assets/img/LOGO-ZE-final.png" alt="Logo Zé Ninguem" class="logo-img"></a>
                  </div>
                  <nav id="nav-bar" class="nav-container">           
                     <ul class="nav-menu">
                         <li class="nav-item">
-                            <a href="#">Quem Somos</a>
+                            <a href="../dist/index.html" target="_self">Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#">O que fazemos</a>
+                            <a href="../dist/components/about.html" target="_self">Quem Somos</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#">M&iacute;dia</a>
+                            <a href="./components/news.html" target="_top">M&iacute;dia</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#">Agenda</a>
+                            <a href="#" onclick="openSchedule()" >Agenda</a>
                         </li>
                         <li class="nav-item">
                             <a href="#" class="btn-form" onclick="openForm()">Fale Conosco</a>
@@ -69,15 +71,16 @@
             <nav id="nav-bar-mobile" class="nav-container-mobile">
                 <ul class="nav-menu-mobile">
                     <li class="nav-item-mobile">
-                        <a href="#">Quem Somos</a>
-                        </li>                        <li class="nav-item-mobile">
-                        <a href="#">O que fazemos</a>
+                        <a href="../dist/index.html" target="_self">Inicio</a>
                     </li>
                     <li class="nav-item-mobile">
-                        <a href="#">M&iacute;dia</a>
+                        <a href="../dist/components/about.html" target="_self">Quem Somos</a>
                     </li>
                     <li class="nav-item-mobile">
-                        <a href="#">Agenda</a>
+                        <a href="./components/news.html" target="_top">M&iacute;dia</a>
+                    </li>
+                    <li class="nav-item-mobile">
+                        <a href="#" onclick="openSchedule()">Agenda</a>
                     </li>
                     <li class="nav-item-mobile">
                         <a href="#" class="btn-modal" onclick="openForm()">Fale Conosco</a>
@@ -117,15 +120,32 @@
                             <div class="slide-box first ">
                                 <!-- Para adicionar um LINK é necessário a tag IMG dentro da tag A.
                                 para a responsividade é necessário os outro tamanho dos items IMG -->
-                                <img src="./assets/img/podcast-2.png" class="" alt="slide 1">
+                                <a href="./components/about.html">
+                                    <img src="./assets/img/LOGO-ZE-final.png" class="" alt="slide 1">
+                                    <p>Um espaço para a sua voz</p>
+                                </a>
                             </div>
             
                             <div class="slide-box ">
-                                <img src="./assets/img/podcast-4.png" class="" alt="slide 2">
+                                <a href="./components/news/news-01.html">
+                                    <img src="./assets/news-img/cofre-dinheiro-arthur-lira.jpg" class="" alt="Cofre com dinheiro e Arthur Lira">
+                                    <div class="description">
+                                        <h3 class="news-title">
+                                            Polícia Federal deflagra operação contra investigados por envolvimento em esquema
+                                        </h3>
+                                    </div>
+                                </a>
                             </div>
             
                             <div class="slide-box ">
-                                <img src="./assets/img/podcast-5.png" class="" alt="slide 3">
+                                <a href="./components/news/news-02.html">
+                                    <img src="./assets/news-img/cristiano-zanin.jpeg" class="" alt="slide 2">
+                                    <div class="description">
+                                        <h3 class="news-title">
+                                            Conheça Cristiano Zanin, advogado do presidente indicado ao STF
+                                        </h3>
+                                    </div>
+                                </a>
                             </div>
             
                             <div class="nav-auto">
@@ -173,53 +193,65 @@
                 <div class="grid-template">
                     <!-- GRID ELEMENTS START -->
                     <div class="grid-element">
-                        <figure class="grid-figure">
-                            <img src="./assets/img/podcast-2.png" alt="">
-                        </figure>
-                        <div class="news-text-div">
-                            <h3 class="news-title">Lorem Ipsum</h3>
-                            <p class="news-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                        </div>
+                        <a href="../dist/components/news/news-01.html" target="_self">
+                            <figure class="grid-figure">
+                                <img src="../dist/assets/news-img/cofre-dinheiro-arthur-lira.jpg" alt="">
+                            </figure>
+                            <div class="news-text-div">
+                                <h3 class="news-title">Polícia Federal</h3>
+                                <p class="news-text">
+                                    Deflagra operação contra investigados por envolvimento em esquema milionário de desvios de recursos do FNDE durante a gestão Bolsonaro. As verbas foram repassadas a prefeituras de Alagoas, curral eleitoral do presidente da Câmara, Arthur Lira. Um dos alvos da ação da PF é assessor de Lira
+                            dinheiro arthur lira.
+                                </p>
+                            </div>
+                        </a>
                     </div>
                     <div class="grid-element">
-                        <figure class="grid-figure">
-                            <img src="./assets/img/podcast-4.png" alt="">
-                        </figure>
-                        <div class="news-text-div">
-                            <h3 class="news-title">Lorem Ipsum</h3>
-                            <p class="news-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                        </div>
+                        <a href="./components/news/news-02.html">
+                            <figure class="grid-figure">
+                                <img src="./assets/news-img/cristiano-zanin.jpeg" alt="Foto de Cristiano Zanin ">
+                            </figure>
+                            <div class="news-text-div">
+                                <h3 class="news-title">Conheça Cristiano Zanin</h3>
+                                <p class="news-text">
+                                    Dedicado, discreto, alérgico a lula: conheça Cristiano Zanin, advogado do presidente indicado ao STF
+                                </p>
+                            </div>
+                        </a>
                     </div>
                     <div class="grid-element">
-                        <figure class="grid-figure">
-                            <img src="./assets/img/podcast-5.png" alt="">
-                        </figure>
-                        <div class="news-text-div">
-                            <h3 class="news-title">Lorem Ipsum</h3>
-                            <p class="news-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                        </div>
-                    </div> 
+                        <a href="./components/news/news-03.html">
+                            <figure class="grid-figure">
+                                <img src="./assets/news-img/news-3-hero-img.jpeg" alt="Vidro Quebrado do Planalto ">
+                            </figure>
+                            <div class="news-text-div">
+                                <h3 class="news-title">Início de trabalhos da CPMI</h3>
+                                <p class="news-text">
+                                    Início de trabalhos da CPMI do 8 de Janeiro é adiado para dia 6 de junho
+                                </p>
+                            </div>
+                        </a>
+                    </div>
                     <div class="grid-element">
-                        <figure class="grid-figure">
-                            <img src="./assets/img/podcast-2.png" alt="">
-                        </figure>
-                        <div class="news-text-div">
-                            <h3 class="news-title">Lorem Ipsum</h3>
-                            <p class="news-text">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                        </div>
+                        <a href="./components/news/news-04.html">
+                            <figure class="grid-figure">
+                                <img src="./assets/news-img/IRF-IMG.jpg" alt="Vidro Quebrado do Planalto ">
+                            </figure>
+                            <div class="news-text-div">
+                                <h3 class="news-title">IReceita recebe 2,7 milhões de declarações do IRPF no Paraná e supera expectativas</h3>
+                                <p class="news-text">
+                                    Início de trabalhos da CPMI do 8 de Janeiro é adiado para dia 6 de junho
+                                </p>
+                            </div>
+                        </a>
                     </div>
                     
                     <!-- GRID ELEMENTS END -->
                 </div>
                 <!-- GRID DIV END -->
+                <div class="seeMore">
+                    <a href="./components/news.html">Ver Mais</a>
+                </div>
 <!-- -------------------------- CONTAINER - news section END -------------------------- -->
         </section>
     
@@ -234,7 +266,11 @@
                     <img src="./assets/img/LOGO-ZE-final.png" alt="" class="logo-img">
                 </figure>
                 <p class="text">
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit tincidunt in felis malesuada mollis purus id sit in aliquet lectus eget morbi dui felis malesuada.
+                    Z&eacute; ningu&eacute;m &eacute; um site dedicado a promover a inclus&atilde;o social, pol&iacute;tica e economicamente. 
+                </p>
+                <br>
+                <p>
+                    Nosso objetivo &eacute; fornecer uma plataforma segura e acolhedora onde essas pessoas possam se expressar livremente.
                 </p>
             </div>
             <div class="contacts">
@@ -310,9 +346,26 @@
         </div>
     </div>
 
+    <div class="schedule-window-modal" id="schedule-window-modal">
+        <div class="modal schedule" id="schedule">
+            <button class="close-btn" id="close-btn-schedule">X</button>
+            
+            <h2>Agenda</h2>
+            <p>
+                V&iacute;deos TODOS OS DIAS com as principais not&iacute;cias do Brasil e do Mundo
+            </p>
+            <p>
+                Lives todas as QUINTAS com os principais assuntos da semana
+            </p>
+            <p>
+                Um Podcast mensal todo dia 15.
+            </p>
+        </div>
+    </div>
+
     <div class="whatsApp">
         <a href="https://wa.me//5521999060262?text=Oi%20Zé%20ninguém%20vamos%20conversar!!%20">
-            <i class="fa-brands fa-whatsapp fa-lg"></i>
+            <img class="whatsApp-img" src="./assets/img/WhatsApp_icon.png" alt="">
         </a>
     </div>
 
