@@ -90,16 +90,18 @@
 
  /*-------------------------- TOGGLE BUTTON --------------------------*/
 
+
 #btn-menu{
     margin-right:3rem;
     width: 5rem;
     height:5rem;
-    border: .2rem solid var(--white);
-    background:transparent;
-    border-radius: .2rem;
+    /* border: .2rem solid var(--white); */
+    background-color:transparent;
+    /* border-radius: .2rem; */
     cursor:pointer;
     transition-duration: 1s; 
-    display:none;   
+    display:none;
+    
 }
 
 .row{
