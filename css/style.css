@@ -158,6 +158,12 @@ h1{
     }
 }
 
+
+.first-content{
+    border:solid .1rem var(--white);
+    border-radius: 3em;
+}
+
                     /* END CONTAINER */
 
 .bar-divider{
@@ -299,6 +305,12 @@ h1{
     margin-right:1rem;
 }
 
+@media (max-width:767px){
+    .contacts, .mini-about, .flex-media{
+        font-size: var(--fs-4);
+    }
+}
+
 
 /* ********* START FORM  ********* */
 /* ********* modal form  ********* */
@@ -321,7 +333,9 @@ h1{
 
 
 .modal {
-    background-color: hsla(252, 100%, 32%, 1);
+    /* background-color: hsla(252, 100%, 32%, 1); */
+    background-color: rgba(255,255,255,.7);
+    color: black;
     position:relative;
     width:60%;
     min-width:320px;
@@ -348,6 +362,8 @@ h1{
 
 /* ********* end modal FORM  ********* */
 
+
+
 form h1{
     text-align: center;
     width: 100%;
@@ -367,7 +383,7 @@ form p{
 .input-single label {
     position:absolute;
     left: 0.2rem;;
-    bottom: .5rem;
+    bottom: 0;
     transition: all .2s;
     cursor:text;
 }
@@ -379,15 +395,15 @@ form p{
     border-top-left-radius: .2rem;
     border-top-right-radius: .2rem;
     border-bottom: 2px solid #be3144;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(255,255,255,0.9);
     padding:1rem;
     outline: 0;
-    color: var(--white);
+    color: black;
 }
 
 form .input-single .input-area:focus ~ label,
 form .input-single .input-area:valid ~ label{
-    transform: translateY(-1.6rem) scale(1.1);
+    transform: translateY(-2rem) scale(1.1);
     font-size: 1.2rem;
 }
 
@@ -410,10 +426,12 @@ form .input-message textarea{
     border-radius: .5rem;
     padding: .5rem;
     outline: none;
-    background-color: rgba(255, 255, 255, .1);
-    color:white
+    background-color: rgba(255, 255, 255, .9);
+    
     
 }
+
+
 
 /*TODO corrigir o alinhamento do botão */
 
@@ -463,6 +481,8 @@ form input[type=submit]:hover{
         font-size:5rem;
     }
 }
+
+
 
 .schedule p{
     margin:2rem 1rem;
