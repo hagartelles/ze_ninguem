@@ -335,7 +335,7 @@ h1{
 .modal {
     /* background-color: hsla(252, 100%, 32%, 1); */
     background-color: rgba(255,255,255,.7);
-    color: black;
+    color: var(--dark-violet);
     position:relative;
     width:60%;
     min-width:320px;
