@@ -196,8 +196,8 @@ h1{
 
 
 .grid-element{
-    border:solid .5rem white;
-    border-radius: 4rem;
+    border:solid .1rem white;
+    border-radius: 3rem;
     overflow: hidden;
     padding:0;
 }
