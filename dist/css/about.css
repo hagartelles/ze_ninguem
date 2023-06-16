@@ -17,16 +17,16 @@ main.container{
 }
 
 .img-about img{
-    width: 40rem ;
+    width: 30rem ;
 }
 
 .vision p, .mission p, .values p{
-    font-size: var(--fs-4);
+    font-size: var(--fs-3);
 }
 
 .about-end{
-    font-size: var(--fs-4);
-    padding: 0 2rem;
+    font-size: var(--fs-3);
+    padding: 0 1rem;
 }
 .about-end p{
     margin-bottom: 2rem;
