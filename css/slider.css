@@ -35,6 +35,7 @@
     text-align: center;
     
     
+    
 }
 
 .slider-content input{
@@ -67,24 +68,21 @@
     padding: 1rem;
 }
 
+.nav-div{
+    height:100%;
+    width:25%;
+    display:flex;
+    position:absolute;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: .5rem;
+}
 .nav-manual, .nav-auto{
     position: absolute;
     width: 25%;
-    margin-top: 20%;
     display:flex;
     justify-content: center;
 
-    @media(min-width: 767px) {
-        margin-top:16.8%;
-    }
-
-    @media(min-width:1023px) {
-            margin-top:16%;
-        };
-
-    @media(min-width: 1439px) {
-        margin-top:14.5%;
-    };
 }
 
 .nav-manual .manual-btn, .nav-auto div{
