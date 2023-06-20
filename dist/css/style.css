@@ -129,14 +129,15 @@ h1{
 }
 
 .container{
-    padding:0 1.5rem;
-    margin:3rem auto 6rem;
+    padding:0 1rem;
     min-height: 1rem;
+    margin:3rem auto 6rem;
 }
 
 @media(min-width: 576px) {
     .container {
-        max-width:540px
+        max-width:540px;
+        margin:3rem auto 6rem;
     }
 }
 
@@ -186,7 +187,7 @@ h1{
 
 .grid-template {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     grid-gap: 4rem;
     width: 100%;
     max-width: 1280px;
