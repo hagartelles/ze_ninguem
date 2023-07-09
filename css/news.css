@@ -27,26 +27,3 @@ figure{
     margin-top: 15rem;
 }
 
-.iframe-div{
-    margin: 2rem;
-    display: flex;
-    justify-content: center;
-}
-
-iframe {
-    width: 375px;
-    height:315px;
-
-    @media (min-width:767px){
-        width:560px;
-    }
-
-    @media (min-width:1023px){
-        width:640px;
-        height:360px
-    }
-    @media (min-width:1339px){
-        width: 966px;
-        height:543px
-    }
-}
